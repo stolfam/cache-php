@@ -1,7 +1,7 @@
 {
   "name": "stolfam/cache-php",
   "license": "MIT",
-  "description": "PHP 7.4 Classes around Nette Framework cache..",
+  "description": "PHP 7.4 Classes wrapped around Nette Framework cache.",
   "version": "1.0.0",
   "type": "library",
   "require": {
