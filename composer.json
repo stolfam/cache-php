@@ -1,0 +1,30 @@
+{
+  "name": "stolfam/cache-php",
+  "license": "MIT",
+  "description": "PHP 7.4 Classes around Nette Framework cache..",
+  "version": "1.0.0",
+  "type": "library",
+  "require": {
+    "php": ">= 7.4.0",
+    "nette/utils": ">= 3.0",
+    "nette/caching": ">= 3.0",
+    "stolfam/utils-php": "^1.0"
+  },
+  "require-dev": {
+    "nette/tester": ">= 2.3"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ],
+    "files": [
+      "src/bootstrap.php"
+    ]
+  },
+  "minimum-stability": "stable",
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  }
+}
