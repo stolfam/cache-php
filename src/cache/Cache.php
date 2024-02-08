@@ -63,13 +63,13 @@
          * Adds object to data storage and cached it.
          *
          * @param IKey   $key
-         * @param        $o
+         * @param mixed  $o
          * @param string $expireIn
          * @param bool   $cacheSliding
-         * @return mixed
+         * @return self
          * @throws \Throwable
          */
-        public function add(IKey $key, $o, $expireIn = '2 months', $cacheSliding = true)
+        public function add(IKey $key, mixed $o, string $expireIn = '2 months', bool $cacheSliding = true): self
         {
             $key = self::getKey($key);
 
@@ -81,7 +81,7 @@
                 ]);
             }
 
-            return $o;
+            return $this;
         }
 
         /**
@@ -146,7 +146,7 @@
         protected function removeDependency(IKey $child, IKey $parent): void
         {
             $dependency = $this->get(new Dependency($child));
-            if ($dependency != null && $dependency instanceof Dependency) {
+            if ($dependency instanceof Dependency) {
                 $dependency->removeDependency(new Dependency($parent));
 
                 if ($dependency->count() > 0) {

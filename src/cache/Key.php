@@ -17,26 +17,25 @@
         use SmartObject;
 
 
-        /** @var mixed */
-        private $id;
+        private string $id;
 
         private ?string $prefix;
 
         /**
          * Key constructor.
-         * @param mixed       $id
+         * @param string      $id
          * @param string|null $prefix
          */
-        public function __construct($id, ?string $prefix = null)
+        public function __construct(string $id, ?string $prefix = null)
         {
             $this->id = $id;
             $this->prefix = $prefix;
         }
 
         /**
-         * @return mixed
+         * @return string
          */
-        public function getId()
+        public function getId(): string
         {
             return $this->id;
         }

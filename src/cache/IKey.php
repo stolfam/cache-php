@@ -11,5 +11,5 @@
     {
         public function getPrefix(): ?string;
 
-        public function getId();
+        public function getId(): string;
     }

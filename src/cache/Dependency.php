@@ -40,7 +40,7 @@
             unset($this->parents[$dependency->getId()]);
         }
 
-        public function getId()
+        public function getId(): string
         {
             return Cache::getKey($this->key);
         }
